@@ -1,0 +1,10 @@
+---
+# tasks file for create-ami
+- name: Create AMI
+  ec2_ami:
+    region: "{{ region }}"
+    instance_id: "{{ ec2_id }}"
+    name: "{{environment}}-{{projectname}}-{{version}}-{{ ansible_date_time.iso8601 | regex_replace('[^a-zA-Z0-9]', '-') }}"
+    wait: yes
+    state: present
+  register: ami
