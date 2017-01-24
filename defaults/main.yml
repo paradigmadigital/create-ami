@@ -1,0 +1,7 @@
+---
+# defaults file for create-ami
+environment : PRO
+projectname : test-name
+version     : 0.1
+region      : eu-west-1
+ec2_id      : 
