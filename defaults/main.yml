@@ -1,6 +1,6 @@
 ---
 # defaults file for create-ami
-environment : PRO
+deploy_environment : PRO
 projectname : test-name
 version     : 0.1
 region      : eu-west-1
