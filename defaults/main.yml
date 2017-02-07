@@ -1,7 +1,8 @@
 ---
 # defaults file for create-ami
-deploy_environment : PRO
-projectname : test-name
-version     : 0.1
-region      : eu-west-1
-ec2_id      : 
+region: 
+instance_id: 
+deploy_environment : 
+projectname : 
+version     : "{{remote_clone_dir | regex_replace('^.*-(.*)','\\1')}}"
+new_ami_name: "{{deploy_environment}}-{{projectname}}-{{version}}-{{ ansible_date_time.iso8601 | regex_replace('[^a-zA-Z0-9]', '-') }}"

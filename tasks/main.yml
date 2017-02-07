@@ -4,7 +4,7 @@
   ec2_ami:
     region: "{{ region }}"
     instance_id: "{{ ec2_id }}"
-    name: "{{deploy_environment}}-{{projectname}}-{{version}}-{{ ansible_date_time.iso8601 | regex_replace('[^a-zA-Z0-9]', '-') }}"
+    name: "{{new_ami_name}}"
     wait: yes
     state: present
   register: ami
