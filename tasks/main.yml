@@ -2,12 +2,12 @@
 # tasks file for create-ami
 - name: Create AMI
   ec2_ami:
-    region: "{{ region }}"
+    region: "{{ ami.region }}"
     instance_id: "{{ ec2_id }}"
-    name: "{{new_ami_name}}"
+    name: "{{ami.name}}"
     wait: yes
     state: present
-  register: ami
+  register: new_ami
 
 - name: Set new AMI ID as fact
-  set_fact: new_ami_id="{{ ami.image_id }}"
+  set_fact: new_ami_id="{{ new_ami.image_id }}"
