@@ -8,3 +8,6 @@
     wait: yes
     state: present
   register: ami
+
+- name: Set new AMI ID as fact
+  set_fact: new_ami_id="{{ ami.image_id }}"
