@@ -20,7 +20,7 @@ Settable variables that are in defaults/main.yml.
 
 The role outputs the next information
 
-* `new_ami_id`: ID of hte new AMI
+* `new_ami_id`: ID of the new AMI
 
 Example Playbook
 ----------------
